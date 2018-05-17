@@ -30,7 +30,7 @@ These are also the steps provided by the two convenience scripts `make-buildenv.
 ## Docker on Windows 7 and 8
 Docker for Windows only runs on Windows 10. For older versions you have to use [docker-tools](https://docs.docker.com/toolbox/toolbox_install_windows/) to install docker.
 
-This version of docker handles filepast for volume mounts differently and this is not supported by the 'dockcross' script so you have to insert the following under line '192' in the script.
+This version of docker handles filepast for volume mounts differently and this is not supported by the `dockcross` script so you have to insert the following under line `192` in the script.
 
 `HOST_PWD=${HOST_PWD/c:/\/c}`
 
@@ -50,9 +50,9 @@ The latter is what we did for OpenCV (see the buildenv-docker/Dockerfile).
 
 ## OpenCV
 
-Change 'ENV OPENCV_VERSION 3.3.1' in the Dockerfile to obtain your desired version.
+Change `ENV OPENCV_VERSION 3.3.1` in the Dockerfile to obtain your desired version.
 
-Remove the 'OPENCV_EXTRA_MODULES_PATH' line in the cmake section of the Dockerfile if you do not need opencv-contrib. If this is the case you can also remove the 'ADD' line with opencv-contrib to skip downloading it.
+Remove the `OPENCV_EXTRA_MODULES_PATH` line in the cmake section of the Dockerfile if you do not need opencv-contrib. If this is the case you can also remove the `ADD` line with opencv-contrib to skip downloading it.
 
 ## Acknowledgments
 
