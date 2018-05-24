@@ -2,7 +2,7 @@ FROM dockcross/windows-x64 as opencvbuild
 
 WORKDIR /opt
 
-ENV OPENCV_VERSION 3.4.1
+ENV OPENCV_VERSION 3.3.1
 ENV OPENCV_PREFIX /opt
 
 RUN apt-get update && \
