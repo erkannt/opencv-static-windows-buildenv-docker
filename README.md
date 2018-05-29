@@ -19,7 +19,8 @@
 ```
 # Pull image and extract the dockcross utility script
 docker pull rknt/opencv-static-windows-buildenv-docker
-docker run --rm rknt/opencv-static-windows-buildenv-docker > ./dockcross
+docker tag rknt/opencv-static-windows-buildenv-docker buildenv
+docker run --rm buildenv > ./dockcross
 chmod +x ./dockcross
 
 # Build executables in a separate build directory
